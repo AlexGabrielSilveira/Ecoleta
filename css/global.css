@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --primary: #322153;
+    --secondary: #34cb79;
+}
+html {
+    font-family: "roboto";
+}
+body{
+    background-color: #d9d9d9;
+}
+.container {
+    height: 100vh;
+    margin: 40px;
+}
+header{
+    background-color: #34cb7875;
+    position: sticky;
+    top: 0px;
+
+    margin: -40px;
+    padding: 5px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a {
+    padding: 5px;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+}
+header i {
+    color: var(--secondary);
+    padding: 5px;
+}

@@ -1,65 +1,49 @@
-html {
-    font-family: "roboto";
-}
-body{
-    background-color: #fffff9;
-}
 #home{
     height: 100vh;
     background: url('../assets/home-background.svg') no-repeat;
     background-position: 35vw 20vh;
 }
-.container {
-    height: 100vh;
-    margin: 40px;
-}
-header{
-    position: sticky;
-    top: 5px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-header a {
-    font-weight: bold;
-    color: #322153;
-    text-decoration: none;
-}
-header i {
-    color: #34cb79;
-    padding: 5px;
-}
 main {
     height: 100vh;
-    max-width: 560px;
+    max-width: 600px;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 main h1{
+    padding: 5px;
+    text-align: center;
     font-size: 54px;
-    color: #322153 ;
+    color: var(--primary) ;
 }
 main p{
-    color: #322153;
+    padding: 5px;
+    text-align: center;
+    color: var(--primary);
 }
 main button {
-    cursor: pointer;
-    max-width: 460px;
-    border: none;
-    outline: none;
+    outline: none; 
     padding: 10px;
     font-size: 14pt;
     background: none;
-    color: #322153;
-    border: 2px solid #34cb79;
+    color: var(--primary);
+    border: 2px solid var(--secondary);
     border-radius: 4px;
-
 }
 main button:hover {
     color: white;
-    transition: 300ms;
-    background-color: #34cb79;
-
+    transition: linear 300ms;
+    background-color: var(--secondary);
+}
+@media (max-width: 900px) {
+    #home {
+        background: 70vw;
+    }
+    header {
+        margin: 0;
+    }
+    .container {
+        align-items: center;
+        text-align: center;
+    }
 }

@@ -1,0 +1,81 @@
+form.center {
+    display: block;
+    max-width: 600px;
+    min-width: 600px;
+    height: auto;
+
+    background-color: white;
+    border-radius: 9px;
+
+    padding: 20px;
+    margin: 80px auto;
+}
+fieldset {
+    border: none;
+}
+legend {
+    text-align: center;
+}
+.center input, select {
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    background-color: #d9d9d9;
+}
+.center h1, h2 {
+    color: var(--primary);
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+}
+.field-group {
+    display: flex;
+}
+label {
+    margin-left: 10px;
+}
+#entity {
+    width: 535px;
+}
+#address {
+    width: 340px;
+}
+#city {
+    width: 260px;
+}
+#state {
+    width: 250px;
+}
+#teste {
+    margin-left: 55px;
+}
+#teste h2 {
+    margin-left: -55px;
+}
+#teste img{
+    border-radius: 4px;
+    background-color: #34cb789d;
+    padding: 20px;
+    margin: 20px;
+    border: 3px solid transparent;
+}
+#teste img:hover{
+    transition: linear 250ms;
+    border: 3px solid var(--primary);
+}
+.center button {
+    outline: none; 
+    padding: 10px;
+    font-size: 14pt;
+    background: none;
+    color: var(--primary);
+    border: 2px solid var(--secondary);
+    border-radius: 4px;
+
+    margin-left: 182px;
+}
+.center button:hover {
+    color: white;
+    transition: linear 300ms;
+    background-color: var(--secondary);
+}
