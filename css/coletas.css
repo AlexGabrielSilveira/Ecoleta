@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.center h4 {
+    text-align: center;
+    color: var(--text);
+    padding: 5px;
+    margin: 10px;
+}
+.card {
+    padding: 10px;
+    width: 320px;
+    height: 420px;
+
+    margin: 30px;
+    background-color: var(--primary);
+    color: var(--text);
+    box-shadow: 0.1px 0.1px 10px #121212;
+}
+.card h1, .card h3, .card p {
+    padding: 5px;
+}
+.card img {
+    width: 320px;
+}

@@ -28,5 +28,35 @@ const ufs = () => {
             })
         
     }
-
     document.getElementById('state').addEventListener('change', lookCity)
+
+    const itensToCollect = document.querySelectorAll('.itens-grid li')
+
+    const hidden = document.getElementById('hidden')
+
+    var itensChoosed = []
+   
+    
+    const handleItem = event => {
+        const itemL = event.target
+        itemL.classList.toggle("selected")
+        
+        const itemId = itemL.dataset.id
+
+        const alreadySelected = itensChoosed.findIndex(item => {
+            return item == itemId
+        })
+        if(alreadySelected >= 0) {
+            const filter = itensChoosed.filter(item => {
+                return item != itemId
+            })
+            itensChoosed = filter
+        }else {
+            itensChoosed.push(itemId)
+        }
+
+        hidden.value = itensChoosed
+    }
+    for(const item of itensToCollect) {
+        item.addEventListener('click', handleItem)
+    }

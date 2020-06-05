@@ -1,11 +1,11 @@
 #home{
     height: 100vh;
-    background: url('../assets/home-background.svg') no-repeat;
-    background-position: 35vw 20vh;
+    background: url('../assets/home-background.png') no-repeat;
+    background-position: 35vw 0vh;
 }
 main {
     height: 100vh;
-    max-width: 600px;
+    max-width: 680px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -14,36 +14,125 @@ main h1{
     padding: 5px;
     text-align: center;
     font-size: 54px;
-    color: var(--primary) ;
+    color: var(--text) ;
 }
 main p{
     padding: 5px;
     text-align: center;
-    color: var(--primary);
+    color: var(--text);
 }
 main button {
     outline: none; 
     padding: 10px;
     font-size: 14pt;
     background: none;
-    color: var(--primary);
-    border: 2px solid var(--secondary);
+    color: var(--text);
+    border: 2px solid var(--text);
     border-radius: 4px;
 }
 main button:hover {
-    color: white;
+    color: var(--primary);
     transition: linear 300ms;
-    background-color: var(--secondary);
+    background-color: var(--text);
 }
 @media (max-width: 900px) {
     #home {
         background: 70vw;
     }
-    header {
-        margin: 0;
-    }
     .container {
         align-items: center;
         text-align: center;
     }
+}
+
+/* MODAL */
+
+#modal {
+    width: 100vw;
+    height: 100vh;
+    background: #1e1e1efa;
+
+    position: fixed;
+    top: 0;
+}
+#modal .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: white;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    transition: linear 250ms;
+}
+#modal header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#modal header h1{
+    margin: 30px;
+    font-size: 84px;
+}
+.search {
+    display: flex;
+    flex-direction: column;
+}
+.search input {
+    padding: 10px;
+    width: 400px;
+    outline: none;
+    border: 2px solid transparent;
+    transition: linear 250ms;
+
+}
+.search input:focus {
+    transition: linear 250ms;
+    border: 2px solid var(--secondary);
+}
+.search button {
+    padding: 8px;
+    margin: 10px;
+    width: 400px;
+}
+#close-bar {
+    color: var(--secondary);
+    padding: 10px;
+    background-color: #1e1e1e;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1000;
+}
+#close-bar i{
+    padding: 10px;
+    z-index: 1000;
+}
+#close-bar:hover {
+    transition: linear 250ms;
+    background-color: #e24545;
+    color: #1e1e1e;
+}
+button#btn {
+    outline: none; 
+    padding: 10px;
+    font-size: 14pt;
+    background: none;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 4px;
+    cursor: pointer;
+}
+ button#btn:hover {
+    color: white;
+    transition: linear 300ms;
+    background-color: var(--secondary);
+}
+
+
+.hide {
+    display: none;
 }

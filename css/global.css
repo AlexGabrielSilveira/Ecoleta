@@ -2,40 +2,48 @@
     padding: 0;
     margin: 0;
 }
+li {
+    list-style: none;
+}
 :root {
-    --primary: #322153;
-    --secondary: #34cb79;
+    --primary: #1e1e1e;
+    --header: #1212129d;
+    --secondary: #3dd180;
+    --text: white;
 }
 html {
     font-family: "roboto";
 }
 body{
-    background-color: #d9d9d9;
+    background-color: var(--primary);
+    max-width: 100%;
 }
 .container {
     height: 100vh;
     margin: 40px;
 }
-header{
-    background-color: #34cb7875;
+header.header-top{
+    padding: 40px 60px;
+
+    background-color: var(--header);
     position: sticky;
     top: 0px;
-
-    margin: -40px;
-    padding: 5px;
-    height: 60px;
-
+    
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-header a {
+header.header-top a {
     padding: 5px;
     font-weight: bold;
-    color: var(--primary);
+    color: var(--text);
     text-decoration: none;
 }
-header i {
-    color: var(--secondary);
-    padding: 5px;
+header.header-top i {
+    color: var(--text);
+    padding: 10px;
 }

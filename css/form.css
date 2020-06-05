@@ -35,33 +35,51 @@ label {
     margin-left: 10px;
 }
 #entity {
-    width: 535px;
+    width: 565px;
 }
 #address {
-    width: 340px;
+    width: 360px;
 }
 #city {
-    width: 260px;
+    width: 310px;
 }
 #state {
     width: 250px;
 }
-#teste {
-    margin-left: 55px;
+.itens-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
 }
-#teste h2 {
-    margin-left: -55px;
-}
-#teste img{
-    border-radius: 4px;
-    background-color: #34cb789d;
+.itens-grid li{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    color: var(--primary);
     padding: 20px;
-    margin: 20px;
-    border: 3px solid transparent;
+
+    border-radius: 4px;
+    background-color: var(--secondary);
+    border: 3px solid transparent; 
+} 
+.itens-grid span {
+    padding: 15px;
 }
-#teste img:hover{
+.itens-grid .selected {
+    border: 3px solid var(--primary);
+    background-color: #34cb785e;
+}
+#itens li:hover{
+    cursor: pointer;
     transition: linear 250ms;
     border: 3px solid var(--primary);
+}
+.itens-grid img,
+.itens-grid span {
+    pointer-events: none;
 }
 .center button {
     outline: none; 
@@ -79,3 +97,4 @@ label {
     transition: linear 300ms;
     background-color: var(--secondary);
 }
+
