@@ -14,7 +14,7 @@ duvídas sobre requísições a APIs.
   
 This site maked during Next Level Week - Starter
 
-And with thisproject i learned many important concepts how template engines,  sql databases and solidify my 
+And with this project i learned many important concepts how template engines,  sql databases and solidify my 
 knowledge on javascript that to more i had basics knowlegde ever the doubt remains to APIs requisitations.
   But this has been amazing week, and i will make alterations in this project
 
