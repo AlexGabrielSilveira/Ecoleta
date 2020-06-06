@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% set bodyId = container %}
+
+    {% block head %}
+        {% block title %}
+            <title>Pontos de coleta | Ecoleta</title>
+        {% endblock title %}
+        <link rel="stylesheet" href="../css/coletas.css">
+    {% endblock head %}
+
+
+{% block content %}
+        {% include "partials/header.html" %}
+    <div class="center">
+        <h4>Pontos de coleta encontrados : 
+            {% if total <= 0 %}
+                <span>Nenhum ponto encontrado</span>
+            {% else %}
+                <span>&nbsp;{{total}} pontos de coleta encontrado</span>
+            {% endif %}
+        </h4>
+    </div>
+    <div class="container">
+        {% for place in places %}
+        <div class="card">
+            <img src="{{ place.image }}" alt="{{ place.name }}">
+            <h1>{{ place.name }}</h1>
+            <h3>{{ place.state }}, {{ place.city }} </h3>
+            <p>
+                {{ place.items }} <br>
+                Número: &nbsp;{{ place.address2 }}<br>
+                
+            </p> 
+        </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
+
+    

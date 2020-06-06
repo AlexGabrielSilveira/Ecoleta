@@ -1,0 +1,26 @@
+{
+  "name": "ecoleta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "nunjucks": "^3.2.1",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexGabrielSilveira/Ecoleta.git"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexGabrielSilveira/Ecoleta/issues"
+  },
+  "homepage": "https://github.com/AlexGabrielSilveira/Ecoleta#readme"
+}

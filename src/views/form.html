@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% set bodyId = container %}
+{% block head %}
+    {% block title %}
+        <title>Formulário | Ecoleta</title>
+    {% endblock title %}
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/style.css">
+{% endblock head %}
+
+<body>
+    {% block content %}
+        {% include "partials/header.html" %}
+        <div class="container">
+            <form method="POST" action="/save-point" class="center">
+                <h1>Cadastro do ponto de coleta</h1>
+                <fieldset>
+                    <legend>
+                        <h2>dados da entidade</h2>
+                    </legend>
+
+                    <div class="field">
+                        <label for="entity">Nome da entidade :</label>
+                        <input type="text" id="entity" name="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="url">Imagem da entidade :</label>
+                        <input type="url" id="url" name="image" required placeholder="https://">
+                    </div>
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="address">Endereço :</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="field">
+                            <label for="number">Número :</label>
+                            <input type="text" id="number" name="address2" required>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="state">Estado :</label>
+                            <select id="state" name="uf" required>
+                                <option value="0" hidden>Estados</option>
+                            </select>
+
+                            <input type="hidden" id="stateReal" name="state">
+                        </div>
+                        <div class="field">
+                            <label for="city">Cidade :</label>
+                            <select type="text" id="city" name="city" required>
+                                <option value="0" hidden>Cidades</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset id="itens">
+                    <legend>
+                        <h2>itens de coleta</h2>
+                    </legend>
+                    <div class="itens-grid">
+                            <li data-id="eletrônicos">
+                                <img src="../assets/eletronicos.svg" alt="eletronicos">
+                                <span>eletrônicos</span>
+                            </li>
+                            <li data-id="Lâmpadas">
+                                <img src="../assets/lampadas.svg" alt="lampadas">
+                                <span>Lâmpadas</span>
+                            </li>
+                            <li data-id="Baterias">
+                                <img src="../assets/baterias.svg" alt="baterias">
+                                <span>Baterias</span>
+                            </li>
+                            <li data-id="Papelão">
+                                <img src="../assets/papeis-papelao.svg" alt="papelao">
+                                <span>Papelão</span>
+                            </li>
+                            <li data-id="Óleo">
+                                <img src="../assets/oleo.svg" alt="oleo">
+                                <span>Óleo</span>
+                            </li>
+                            <li data-id="Orgânicos">
+                                <img src="../assets/organicos.svg" alt="organicos">
+                                <span>Orgânicos</span>
+                            </li>
+                    </div>
+                    <input id="hidden" type="hidden" name="items">
+                </fieldset>
+
+                <button type="submit">Cadastrar ponto de coleta</button>
+                
+            </form>
+        </div>
+    {% if saved %}
+        {% include "partials/point_modal.html" %}}
+    {% endif %}
+    {% endblock content %}
+
+    {% block scripts %}
+        <script src="../javascript/form.js"></script>
+    {% endblock scripts %}
+
+</body>
+</html>

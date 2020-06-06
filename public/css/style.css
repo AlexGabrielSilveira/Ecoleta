@@ -105,11 +105,9 @@ main button:hover {
     background-color: #1e1e1e;
     width: 100%;
     cursor: pointer;
-    z-index: 1000;
 }
 #close-bar i{
     padding: 10px;
-    z-index: 1000;
 }
 #close-bar:hover {
     transition: linear 250ms;
@@ -126,7 +124,7 @@ button#btn {
     border-radius: 4px;
     cursor: pointer;
 }
- button#btn:hover {
+button#btn:hover {
     color: white;
     transition: linear 300ms;
     background-color: var(--secondary);

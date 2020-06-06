@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        {% block title %}
+            <title>Home | Ecoleta</title>
+        {% endblock title %}
+        
+        <link rel="shortcut icon" href="../assets/logo.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/global.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/bc2369fddf.js" crossorigin="anonymous"></script>
+    
+        {% block head %}
+        {% endblock head %}
+    </head>
+<body>
+
+    <div id="{{ bodyId }}" class="{{ bodyId }}">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    {% block modal %}
+    {% endblock modal %}
+
+    {% block scripts %}
+    {% endblock scripts %}
+</body>
+</html>
