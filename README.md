@@ -1,6 +1,7 @@
- #<p align=center>
- #   <img src="https://github.com/AlexGabrielSilveira/Ecoleta/blob/master/public/assets/logo.png?raw=true">
- # </p>
+ <p align=center>
+    <img src="https://github.com/AlexGabrielSilveira/Ecoleta/blob/master/public/assets/logo.png?raw=true">
+    <h2>Ecoleta</h2>
+ </p>
 
 Esse site foi feito durante a Next Level Week - Starter
 
