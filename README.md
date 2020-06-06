@@ -1,5 +1,7 @@
-# Ecoleta
-# <img src="https://github.com/AlexGabrielSilveira/Ecoleta/blob/master/public/assets/logo.png?raw=true">
+  # Ecoleta <center>
+              <img src="https://github.com/AlexGabrielSilveira/Ecoleta/blob/master/public/assets/logo.png?raw=true">
+            </center>
+
 Esse site foi feito durante a Next Level Week - Starter
 
 E com esse projeto aprendi varios conceitos importantes como templates engines e banco de dados relacionais e
